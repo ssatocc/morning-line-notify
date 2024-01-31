@@ -1,0 +1,23 @@
+name: line-notify
+
+on:
+  schedule:
+    # 6am on JST
+    - cron: '0 21 * * *'
+  workflow_dispatch:
+
+jobs:
+  line-notify:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Run
+      env:
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+      run: |
+        echo "Start time: $(TZ=Asia/Tokyo date)"
+        bash send.sh $ACCESS_TOKEN
+        echo -e "\nEnd time: $(TZ=Asia/Tokyo date)"
