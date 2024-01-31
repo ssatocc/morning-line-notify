@@ -18,6 +18,6 @@ jobs:
       env:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
       run: |
-        echo "Start time: $(TZ=Asia/Tokyo date)"
+        echo "Start time: $(TZ=Asia/Tokyo date '+%Y-%m-%d %H:%M:%S') JST"
         bash send.sh $ACCESS_TOKEN
-        echo -e "\nEnd time: $(TZ=Asia/Tokyo date)"
+        echo -e "\nEnd time: $(TZ=Asia/Tokyo date '+%Y-%m-%d %H:%M:%S') JST"
