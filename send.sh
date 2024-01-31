@@ -1,6 +1,6 @@
 #!/bin/bash
 
-MSG="Good morning!"
+MSG="おはよう！$(TZ=Asia/Tokyo date '+%H時%M分')だよ！"
 IMAGE_DIR="./images/"
 MAX_NUM=`ls $IMAGE_DIR | wc -l`
 RANDOM_NUM=$((RANDOM % MAX_NUM + 1))
