@@ -19,5 +19,6 @@ jobs:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
       run: |
         echo "Start time: $(TZ=Asia/Tokyo date '+%Y-%m-%d %H:%M:%S') JST"
+        ls -l ./images/
         bash send.sh $ACCESS_TOKEN
         echo -e "\nEnd time: $(TZ=Asia/Tokyo date '+%Y-%m-%d %H:%M:%S') JST"
