@@ -8,7 +8,7 @@ cp -p .env.example .env
 ```
 
 ```bash
-. .env
+vi .env
 ```
 
 ```bash
