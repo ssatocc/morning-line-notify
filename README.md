@@ -11,6 +11,10 @@ cp -p .env.example .env
 . .env
 ```
 
+```bash
+. .env
+```
+
 ## Send a Message
 
 ```bash
